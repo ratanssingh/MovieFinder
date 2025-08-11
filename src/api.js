@@ -2,7 +2,7 @@ const API_KEY = 'a8192034';
 const API_BASE = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
 
-const NO_IMAGE_URL = 'https://via.placeholder.com/400x600.png?text=No+Image';
+const NO_IMAGE_URL ='http://img.omdbapi.com/?apikey=a8192034&i=tt3896198';
 
 
 function normalizeMovie(omdbMovie) {

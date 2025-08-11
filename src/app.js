@@ -134,7 +134,7 @@ function handleFavoriteToggle(event) {
   if (!button) return;
 
   const card = button.closest('.movie-card');
-  const movieId = Number(card.dataset.movieId);
+  const movieId = card.dataset.movieId;
 
   
   const movie = [...state.items, ...state.favorites].find(m => m.id === movieId);
