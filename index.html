@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Movie Finder</h1>
+    <input type="search" id="search-input" placeholder="Search for a movie...">
+  </header>
+
+  <main>
+    <section class="results-section">
+      <h2 id="results-heading">Popular Movies</h2>
+      <div id="results-status" class="status-message"></div>
+      <div id="results-grid" class="movie-grid"></div>
+    </section>
+
+    <aside class="favorites-section">
+      <h2>My Favorites</h2>
+      <div id="favorites-grid" class="movie-grid"></div>
+    </aside>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

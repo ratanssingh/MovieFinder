@@ -1,0 +1,116 @@
+:root {
+  --bg-color: #121212;
+  --card-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --primary-color: #bb86fc;
+  --border-color: #333;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0 0 1rem;
+}
+
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.results-section h2, .favorites-section h2 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.status-message {
+  padding: 2rem;
+  text-align: center;
+  font-style: italic;
+  color: #aaa;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background-color: #333;
+}
+
+.movie-card-content {
+  padding: 0.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card-content h3 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+.movie-card-content p {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 0 0 0.75rem;
+}
+
+.movie-card button {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: auto;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.movie-card button:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
